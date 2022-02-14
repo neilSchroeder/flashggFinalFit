@@ -1,0 +1,153 @@
+
+ *** Break *** bus error
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+#0  0x00002b008f0c660c in waitpid () from /lib64/libc.so.6
+#1  0x00002b008f043f62 in do_system () from /lib64/libc.so.6
+#2  0x00002b0090c45a8b in TUnixSystem::StackTrace() () from /cvmfs/cms.cern.ch/slc7_amd64_gcc700/cms/cmssw/CMSSW_10_2_13/external/slc7_amd64_gcc700/lib/libCore.so
+#3  0x00002b0090c480cc in TUnixSystem::DispatchSignals(ESignals) () from /cvmfs/cms.cern.ch/slc7_amd64_gcc700/cms/cmssw/CMSSW_10_2_13/external/slc7_amd64_gcc700/lib/libCore.so
+#4  <signal handler called>
+#5  0x00002b008f1585d0 in __memcpy_ssse3_back () from /lib64/libc.so.6
+#6  0x00002b008e570a88 in PyString_FromStringAndSize (str=0x2b00a5714000 <error: Cannot access memory at address 0x2b00a5714000>, size=4) at Objects/stringobject.c:95
+#7  0x00002b008e45806c in s_unpack_internal (startfrom=0x2b00a5714000 <error: Cannot access memory at address 0x2b00a5714000>, soself=<optimized out>, soself=<optimized out>) at /build/cmsbld/auto-builds/CMSSW_10_1_0-slc7_amd64_gcc700/build/CMSSW_10_1_0-build/BUILD/slc7_amd64_gcc700/external/python/2.7.14-omkpbe4/python-2.7.14/Modules/_struct.c:1428
+#8  0x00002b008e45823e in s_unpack (self=0x2b00a0ece998, inputstr=<optimized out>) at /build/cmsbld/auto-builds/CMSSW_10_1_0-slc7_amd64_gcc700/build/CMSSW_10_1_0-build/BUILD/slc7_amd64_gcc700/external/python/2.7.14-omkpbe4/python-2.7.14/Modules/_struct.c:1483
+#9  0x00002b008e5ce733 in call_function (oparg=<optimized out>, pp_stack=0x7ffc19f02a30) at Python/ceval.c:4345
+#10 PyEval_EvalFrameEx (f=f
+entry=0x2b00a4acb7f0, throwflag=throwflag
+entry=0) at Python/ceval.c:2994
+#11 0x00002b008e5ce087 in fast_function (nk=<optimized out>, na=<optimized out>, n=3, pp_stack=0x7ffc19f02b40, func=<optimized out>) at Python/ceval.c:4442
+#12 call_function (oparg=<optimized out>, pp_stack=0x7ffc19f02b40) at Python/ceval.c:4377
+#13 PyEval_EvalFrameEx (f=f
+entry=0x2047e20, throwflag=throwflag
+entry=0) at Python/ceval.c:2994
+#14 0x00002b008e5cf7b8 in PyEval_EvalCodeEx (co=<optimized out>, globals=<optimized out>, locals=locals
+entry=0x0, args=args
+entry=0x2b008f3ee9e8, argcount=<optimized out>, kws=kws
+entry=0x2b008e2e4068, kwcount=0, defs=0x0, defcount=0, closure=0x0) at Python/ceval.c:3589
+#15 0x00002b008e545bbd in function_call (func=0x2b00a0fc8aa0, arg=0x2b008f3ee9d0, kw=0x2b00a4af9168) at Objects/funcobject.c:523
+#16 0x00002b008e515f03 in PyObject_Call (func=func
+entry=0x2b00a0fc8aa0, arg=arg
+entry=0x2b008f3ee9d0, kw=kw
+entry=0x2b00a4af9168) at Objects/abstract.c:2547
+#17 0x00002b008e5c80c9 in ext_do_call (nk=<optimized out>, na=1, flags=<optimized out>, pp_stack=0x7ffc19f02db8, func=0x2b00a0fc8aa0) at Python/ceval.c:4671
+#18 PyEval_EvalFrameEx (f=f
+entry=0x2b00a4a34a28, throwflag=throwflag
+entry=0) at Python/ceval.c:3033
+#19 0x00002b008e5cf7b8 in PyEval_EvalCodeEx (co=<optimized out>, globals=<optimized out>, locals=locals
+entry=0x0, args=<optimized out>, argcount=<optimized out>, kws=0x2b008f3dd3d0, kwcount=0, defs=0x2b009f1f23d8, defcount=3, closure=0x0) at Python/ceval.c:3589
+#20 0x00002b008e5cbaa9 in fast_function (nk=0, na=<optimized out>, n=<optimized out>, pp_stack=0x7ffc19f02f80, func=<optimized out>) at Python/ceval.c:4452
+#21 call_function (oparg=<optimized out>, pp_stack=0x7ffc19f02f80) at Python/ceval.c:4377
+#22 PyEval_EvalFrameEx (f=f
+entry=0x2b008f3dd248, throwflag=throwflag
+entry=0) at Python/ceval.c:2994
+#23 0x00002b008e5cf7b8 in PyEval_EvalCodeEx (co=co
+entry=0x2b008f3f6db0, globals=globals
+entry=0x2b008e33b168, locals=locals
+entry=0x2b008e33b168, args=args
+entry=0x0, argcount=argcount
+entry=0, kws=kws
+entry=0x0, kwcount=0, defs=0x0, defcount=0, closure=0x0) at Python/ceval.c:3589
+#24 0x00002b008e5cf9c9 in PyEval_EvalCode (co=co
+entry=0x2b008f3f6db0, globals=globals
+entry=0x2b008e33b168, locals=locals
+entry=0x2b008e33b168) at Python/ceval.c:669
+#25 0x00002b008e5f1eda in run_mod (arena=0x1fa2250, flags=0x7ffc19f031dc, locals=0x2b008e33b168, globals=0x2b008e33b168, filename=0x2b008f3f6db0 "\002", mod=<optimized out>) at Python/pythonrun.c:1385
+#26 PyRun_FileExFlags (fp=fp
+entry=0x201b250, filename=filename
+entry=0x7ffc19f03eff "/afs/cern.ch/work/n/nschroed/flash_2021-11-30/CMSSW_10_2_13/src/flashggFinalFit/Trees2WS/trees2ws.py", start=start
+entry=257, globals=globals
+entry=0x2b008e33b168, locals=locals
+entry=0x2b008e33b168, closeit=closeit
+entry=1, flags=0x7ffc19f031dc) at Python/pythonrun.c:1371
+#27 0x00002b008e5f3cd3 in PyRun_SimpleFileExFlags (fp=fp
+entry=0x201b250, filename=0x7ffc19f03eff "/afs/cern.ch/work/n/nschroed/flash_2021-11-30/CMSSW_10_2_13/src/flashggFinalFit/Trees2WS/trees2ws.py", closeit=closeit
+entry=1, flags=flags
+entry=0x7ffc19f031dc) at Python/pythonrun.c:957
+#28 0x00002b008e5f4333 in PyRun_AnyFileExFlags (fp=fp
+entry=0x201b250, filename=<optimized out>, closeit=closeit
+entry=1, flags=flags
+entry=0x7ffc19f031dc) at Python/pythonrun.c:761
+#29 0x00002b008e60c8be in Py_Main (argc=<optimized out>, argv=<optimized out>) at Modules/main.c:645
+#30 0x00002b008f023555 in __libc_start_main () from /lib64/libc.so.6
+#31 0x000000000040066e in _start ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+You may get help by asking at the ROOT forum http://root.cern.ch/forum.
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  0x00002b008f1585d0 in __memcpy_ssse3_back () from /lib64/libc.so.6
+#6  0x00002b008e570a88 in PyString_FromStringAndSize (str=0x2b00a5714000 <error: Cannot access memory at address 0x2b00a5714000>, size=4) at Objects/stringobject.c:95
+#7  0x00002b008e45806c in s_unpack_internal (startfrom=0x2b00a5714000 <error: Cannot access memory at address 0x2b00a5714000>, soself=<optimized out>, soself=<optimized out>) at /build/cmsbld/auto-builds/CMSSW_10_1_0-slc7_amd64_gcc700/build/CMSSW_10_1_0-build/BUILD/slc7_amd64_gcc700/external/python/2.7.14-omkpbe4/python-2.7.14/Modules/_struct.c:1428
+#8  0x00002b008e45823e in s_unpack (self=0x2b00a0ece998, inputstr=<optimized out>) at /build/cmsbld/auto-builds/CMSSW_10_1_0-slc7_amd64_gcc700/build/CMSSW_10_1_0-build/BUILD/slc7_amd64_gcc700/external/python/2.7.14-omkpbe4/python-2.7.14/Modules/_struct.c:1483
+#9  0x00002b008e5ce733 in call_function (oparg=<optimized out>, pp_stack=0x7ffc19f02a30) at Python/ceval.c:4345
+#10 PyEval_EvalFrameEx (f=f
+entry=0x2b00a4acb7f0, throwflag=throwflag
+entry=0) at Python/ceval.c:2994
+#11 0x00002b008e5ce087 in fast_function (nk=<optimized out>, na=<optimized out>, n=3, pp_stack=0x7ffc19f02b40, func=<optimized out>) at Python/ceval.c:4442
+#12 call_function (oparg=<optimized out>, pp_stack=0x7ffc19f02b40) at Python/ceval.c:4377
+#13 PyEval_EvalFrameEx (f=f
+entry=0x2047e20, throwflag=throwflag
+entry=0) at Python/ceval.c:2994
+#14 0x00002b008e5cf7b8 in PyEval_EvalCodeEx (co=<optimized out>, globals=<optimized out>, locals=locals
+entry=0x0, args=args
+entry=0x2b008f3ee9e8, argcount=<optimized out>, kws=kws
+entry=0x2b008e2e4068, kwcount=0, defs=0x0, defcount=0, closure=0x0) at Python/ceval.c:3589
+#15 0x00002b008e545bbd in function_call (func=0x2b00a0fc8aa0, arg=0x2b008f3ee9d0, kw=0x2b00a4af9168) at Objects/funcobject.c:523
+#16 0x00002b008e515f03 in PyObject_Call (func=func
+entry=0x2b00a0fc8aa0, arg=arg
+entry=0x2b008f3ee9d0, kw=kw
+entry=0x2b00a4af9168) at Objects/abstract.c:2547
+#17 0x00002b008e5c80c9 in ext_do_call (nk=<optimized out>, na=1, flags=<optimized out>, pp_stack=0x7ffc19f02db8, func=0x2b00a0fc8aa0) at Python/ceval.c:4671
+#18 PyEval_EvalFrameEx (f=f
+entry=0x2b00a4a34a28, throwflag=throwflag
+entry=0) at Python/ceval.c:3033
+#19 0x00002b008e5cf7b8 in PyEval_EvalCodeEx (co=<optimized out>, globals=<optimized out>, locals=locals
+entry=0x0, args=<optimized out>, argcount=<optimized out>, kws=0x2b008f3dd3d0, kwcount=0, defs=0x2b009f1f23d8, defcount=3, closure=0x0) at Python/ceval.c:3589
+#20 0x00002b008e5cbaa9 in fast_function (nk=0, na=<optimized out>, n=<optimized out>, pp_stack=0x7ffc19f02f80, func=<optimized out>) at Python/ceval.c:4452
+#21 call_function (oparg=<optimized out>, pp_stack=0x7ffc19f02f80) at Python/ceval.c:4377
+#22 PyEval_EvalFrameEx (f=f
+entry=0x2b008f3dd248, throwflag=throwflag
+entry=0) at Python/ceval.c:2994
+#23 0x00002b008e5cf7b8 in PyEval_EvalCodeEx (co=co
+entry=0x2b008f3f6db0, globals=globals
+entry=0x2b008e33b168, locals=locals
+entry=0x2b008e33b168, args=args
+entry=0x0, argcount=argcount
+entry=0, kws=kws
+entry=0x0, kwcount=0, defs=0x0, defcount=0, closure=0x0) at Python/ceval.c:3589
+#24 0x00002b008e5cf9c9 in PyEval_EvalCode (co=co
+entry=0x2b008f3f6db0, globals=globals
+entry=0x2b008e33b168, locals=locals
+entry=0x2b008e33b168) at Python/ceval.c:669
+#25 0x00002b008e5f1eda in run_mod (arena=0x1fa2250, flags=0x7ffc19f031dc, locals=0x2b008e33b168, globals=0x2b008e33b168, filename=0x2b008f3f6db0 "002", mod=<optimized out>) at Python/pythonrun.c:1385
+#26 PyRun_FileExFlags (fp=fp
+entry=0x201b250, filename=filename
+entry=0x7ffc19f03eff "/afs/cern.ch/work/n/nschroed/flash_2021-11-30/CMSSW_10_2_13/src/flashggFinalFit/Trees2WS/trees2ws.py", start=start
+entry=257, globals=globals
+entry=0x2b008e33b168, locals=locals
+entry=0x2b008e33b168, closeit=closeit
+entry=1, flags=0x7ffc19f031dc) at Python/pythonrun.c:1371
+#27 0x00002b008e5f3cd3 in PyRun_SimpleFileExFlags (fp=fp
+entry=0x201b250, filename=0x7ffc19f03eff "/afs/cern.ch/work/n/nschroed/flash_2021-11-30/CMSSW_10_2_13/src/flashggFinalFit/Trees2WS/trees2ws.py", closeit=closeit
+entry=1, flags=flags
+entry=0x7ffc19f031dc) at Python/pythonrun.c:957
+#28 0x00002b008e5f4333 in PyRun_AnyFileExFlags (fp=fp
+entry=0x201b250, filename=<optimized out>, closeit=closeit
+entry=1, flags=flags
+entry=0x7ffc19f031dc) at Python/pythonrun.c:761
+#29 0x00002b008e60c8be in Py_Main (argc=<optimized out>, argv=<optimized out>) at Modules/main.c:645
+#30 0x00002b008f023555 in __libc_start_main () from /lib64/libc.so.6
+#31 0x000000000040066e in _start ()
+===========================================================
+
+
