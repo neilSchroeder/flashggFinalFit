@@ -84,6 +84,7 @@ if opt.inputConfig != '':
 
     # Import config options
     _cfg = import_module(re.sub(".py","",opt.inputConfig)).trees2wsCfg
+    print(_cfg)
 
     #Extract options
     inputTreeDir     = _cfg['inputTreeDir']

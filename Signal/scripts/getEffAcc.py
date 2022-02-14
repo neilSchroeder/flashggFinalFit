@@ -96,6 +96,13 @@ for _mp in opt.massPoints.split(","):
     if r['cat'] == "NOTAG": continue
     if opt.skipCOWCorr: proc_yield = df[df['proc']==r['proc']].nominal_yield.sum()
     else: proc_yield = df[df['proc']==r['proc']].nominal_yield_COWCorr.sum()
+    if proc_yield == 0: 
+        proc_yield = 1
+        print(df['proc'])
+        print(r['proc'])
+        print(df[df['proc']==r['proc']])
+        print(f[df['proc']==r['proc']].nominal_yield_COWCorr)
+        print("[WARNING] proc_yield came out to 0 in mass point %s"%(_mp))
     ea = r['nominal_yield']/proc_yield
     if ea < 0.: ea = 0.
     effAcc[r['granular_key']] = ea

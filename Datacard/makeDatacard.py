@@ -53,6 +53,8 @@ for f_pkl_name in pkl_files:
     df = pickle.load(f_pkl)
     data = pd.concat([data,df], ignore_index=True, axis=0, sort=False)
 
+print(data.columns)
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Systematics: use factory function to calculate yield variations
 if opt.doSystematics:

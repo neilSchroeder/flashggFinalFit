@@ -61,6 +61,7 @@ def containsNOTAG( _listOfWSFileNames ):
   ws = f0.Get(inputWSName__)
   allData = ws.allData()
   for d in allData:
+    print(d.GetName())
     if "NOTAG" in d.GetName(): return True
   return False
 

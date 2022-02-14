@@ -54,6 +54,7 @@ def getHistograms( _ws, _nominalDataName, _sname ):
   rdh_up = _ws.data("%s_%sUp01sigma"%(_nominalDataName,_sname))
   rdh_down = _ws.data("%s_%sDown01sigma"%(_nominalDataName,_sname))
   # Check if not NONE type and fill histograms
+  print(rdh_up, "%s_%sUp01sigma"%(_nominalDataName,_sname))
   if rds_nominal: rds_nominal.fillHistogram(_hists['nominal'],ROOT.RooArgList(mgg))
   else:
     print " --> [ERROR] Could not extract nominal RooDataSet: %s. Leaving"%_nominalDataName

@@ -53,7 +53,7 @@ def writeSubFiles(_opts):
   if _opts['batch'] == "condor":
     _executable = "condor_%s_%s"%(_opts['mode'],_opts['ext'])
     _f = open("%s/%s.sh"%(_jobdir,_executable),"w") # single .sh script split into separate jobs
-    writePreamble(_f)
+    writePreamble(_f, None if _opts['flashggPath'] == '' else _opts['flashggPath'])
 
     # Write details depending on mode
     if( _opts['mode'] == "trees2ws" ):
@@ -91,7 +91,7 @@ def writeSubFiles(_opts):
         # Define output file name
         outf = "_".join(re.sub("_%s.root"%p,"",glob.glob("%s/*.root"%wsdir)[0].split("/")[-1]).split("_")[0:-1])+"_%s.root"%p
         outfFullName = "%s/%s"%(_opts['outputWSDir'],outf)
-        _f.write("if [ $1 -eq %g ]; then\n"%tfidx)
+        _f.write("if [ $1 -eq %g ]; then\n"%widx)
         _f.write("  hadd_workspaces %s %s/*.root\n"%(outfFullName,wsdir))
         _f.write("fi\n")
 
