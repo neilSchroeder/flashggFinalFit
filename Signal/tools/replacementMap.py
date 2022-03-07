@@ -10,7 +10,7 @@ globalReplacementMap['example'] = od()
 #  * single proc x cat for wrong vertex since for dZ > 1cm shape independent of proc x cat
 #  * use proc x cat with highest number of WV events
 globalReplacementMap['example']['procWV'] = "GG2H"
-globalReplacementMap['example']['catWV'] = "Untagged_Tag0"
+globalReplacementMap['example']['catWV'] = "UntaggedTag_0"
 # For RIGHT VERTEX SCENARIO:
 #  * default you should add is diagonal process from given category 
 #  * if few events in diagonal process then may need to change the category aswell (see catRVMap)

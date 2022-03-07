@@ -11,5 +11,12 @@
         "fits":"profile1D:syst:all",
         "points":"20:1",
         "fit_opts":"--saveSpecifiedNuis all --saveInactivePOI 1 --cminApproxPreFitTolerance=10"
+    },
+
+    "MH":{
+        "pois":"MH,CMS_hgg_mass",
+        "fits":"profile1D:syst:all",
+        "points":"20:1",
+        "fit_opts":"--saveSpecifiedNuis all --saveInactivePOI 1 --cminApproxPreFitTolerance=10"
     }
 }
