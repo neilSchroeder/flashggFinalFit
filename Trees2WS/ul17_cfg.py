@@ -3,7 +3,7 @@ trees2wsCfg = {
         'inputTreeDir':'tagsDumper/trees',
         
         # Variables to be added to dataframe: use wildcard * for common strings
-        'mainVars':["CMS_hgg_mass","weight","dZ","*sigma"], # Vars added to nominal MC RooDataSets
+        'mainVars':["CMS_hgg_mass","weight","centralObjectWeight","dZ","*sigma"], # Vars added to nominal MC RooDataSets
         'dataVars':["CMS_hgg_mass","weight"], # Vars to be added nominal data RooDataSets
         'stxsVar':'', # Var for STXS splitting: if using the option -doSTXSSplitting
         'notagVars':["weight"], # Vars to add to NOTAG RooDataset: if using option --doNOTAG

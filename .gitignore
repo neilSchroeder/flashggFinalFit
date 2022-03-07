@@ -32,6 +32,7 @@ AutoDict_*
 *.out
 *.tmp
 *.pcm
+*.err
 *.o
 
 # Output dirs in signal and bkg

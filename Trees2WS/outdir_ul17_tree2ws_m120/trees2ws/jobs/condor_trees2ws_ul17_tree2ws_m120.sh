@@ -285,8 +285,5 @@ if [ $1 -eq 91 ]; then
  python /afs/cern.ch/work/n/nschroed/flash_2021-11-30/CMSSW_10_2_13/src/flashggFinalFit/Trees2WS/trees2ws.py --inputConfig ul17_cfg.py --inputTreeFile /eos/home-n/nschroed/Higgs_Mass_UL/WorkspaceTest/Pass2/2017/Sig/Raw/m120/output_ttHJetToGG_M120_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_7.root --productionMode tth --year 2017 --doNOTAG --doSystematics --inputMass 120
 fi
 if [ $1 -eq 92 ]; then
- python /afs/cern.ch/work/n/nschroed/flash_2021-11-30/CMSSW_10_2_13/src/flashggFinalFit/Trees2WS/trees2ws.py --inputConfig ul17_cfg.py --inputTreeFile /eos/home-n/nschroed/Higgs_Mass_UL/WorkspaceTest/Pass2/2017/Sig/Raw/m120/output_ttHJetToGG_M120_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_8.root --productionMode tth --year 2017 --doNOTAG --doSystematics --inputMass 120
-fi
-if [ $1 -eq 93 ]; then
  python /afs/cern.ch/work/n/nschroed/flash_2021-11-30/CMSSW_10_2_13/src/flashggFinalFit/Trees2WS/trees2ws.py --inputConfig ul17_cfg.py --inputTreeFile /eos/home-n/nschroed/Higgs_Mass_UL/WorkspaceTest/Pass2/2017/Sig/Raw/m120/output_ttHJetToGG_M120_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8_9.root --productionMode tth --year 2017 --doNOTAG --doSystematics --inputMass 120
 fi

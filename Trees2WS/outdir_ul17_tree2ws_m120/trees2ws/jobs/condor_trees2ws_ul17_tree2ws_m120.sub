@@ -10,4 +10,4 @@ on_exit_hold = (ExitBySignal == True) || (ExitCode != 0)
 periodic_release =  (NumJobStarts < 3) && ((CurrentTime - EnteredCurrentStatus) > 600)
 
 +JobFlavour = "longlunch"
-queue 94
+queue 93
